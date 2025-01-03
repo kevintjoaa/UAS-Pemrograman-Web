@@ -1,0 +1,101 @@
+/* Mengatur tampilan body dengan background gambar fullscreen */
+body {
+    background-image: url(http://localhost/inventaris/assets/images/background.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFD200;
+    text-align: center;
+    flex-direction: column; /* Membuat elemen di body ditata secara vertikal */
+}
+
+/* Mengatur header */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Bayangan teks */
+    position: absolute;
+    top: 20%;  /* Posisi header lebih tinggi agar tidak terlalu tengah */
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan secara horizontal */
+}
+
+/* Formulir login */
+form {
+    background-color: #1D1D1D; /* Semi-transparent background untuk formulir */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px; /* Batasi lebar maksimal form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Tambahkan bayangan pada formulir */
+}
+
+/* Input dan tombol dalam formulir */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f0f0f0; /* Warna latar belakang input */
+}
+
+/* Tombol login */
+button {
+    width: 50%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #2c2e2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Tombol hover */
+button:hover {
+    background-color: #FFD200;
+}
+
+/* Pesan error - kotak hitam dengan teks kuning */
+p {
+    font-size: 16px;
+    margin-top: 10px; /* Memberikan jarak yang tepat antara form dan pesan error */
+    color: #FFD200; /* Warna teks kuning */
+    font-weight: bold; /* Membuat pesan lebih tebal */
+    background-color: #2c2e2c; /* Latar belakang hitam untuk pesan error */
+    padding: 10px;
+    border-radius: 5px; /* Menambahkan sudut melengkung untuk pesan */
+    text-align: center; /* Agar teks berada di tengah */
+}
+
+/* Responsif - Menyesuaikan tampilan pada layar lebih kecil */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 90%; /* Menyesuaikan lebar form pada layar kecil */
+    }
+
+    h1 {
+        font-size: 28px; /* Mengurangi ukuran font header pada layar kecil */
+    }
+
+    p {
+        font-size: 14px; /* Mengurangi ukuran font pesan error pada layar kecil */
+    }
+}
